@@ -6,6 +6,31 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #define MOUSE 6
 
+// OS設定を日本語キーボードのまま使用するための変換定義
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_KANA         LANGUAGE_1        // かな
+#define JP_EISU         LANGUAGE_2        // 英数
+#define JP_HANZEN       GRAVE             // 半角/全角
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -49,7 +74,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                      &kp T                                            &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                      &kp G        &trans               &kp UP_ARROW   &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B        &kp DOUBLE_QUOTES    &kp DOWN       &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B        &kp JP_DQUOTE        &kp DOWN       &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LANGUAGE_2  &lt 1 SPACE  &lt 3 LANGUAGE_1     &kp BACKSPACE  &lt 2 ENTER                             &kp RIGHT_SHIFT
             >;
 
@@ -60,10 +85,10 @@
 
         layer_1 {
             bindings = <
-&kp F1         &kp F2           &kp F3                &kp F4                 &kp F5                                &kp F6          &kp F7      &kp F8  &kp F9  &kp F10
-&kp COLON      &kp EXCLAMATION  &kp SLASH             &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &trans     &trans  &kp UNDERSCORE  &kp F7      &kp F8  &kp F9  &kp SEMICOLON
-&kp SEMICOLON  &kt QUESTION     &kp NON_US_BACKSLASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp SQT    &trans  &sk AT_SIGN     &kp DOLLAR  &trans  &trans  &kp F11
-&trans         &kp CARET        &trans                &trans                 &trans             &trans     &trans  &trans                                      &kp F12
+&kp F1         &kp F2           &kp F3                &kp F4            &kp F5                                  &kp F6             &kp F7      &kp F8  &kp F9  &kp F10
+&kp JP_COLON   &kp EXCLAMATION  &kp SLASH             &kp JP_LPAREN     &kp JP_LBRACKET    &trans       &trans  &kp JP_UNDERSCORE  &kp F7      &kp F8  &kp F9  &kp SEMICOLON
+&kp SEMICOLON  &kt QUESTION     &kp JP_YEN            &kp JP_RPAREN     &kp JP_RBRACKET    &kp JP_QUOTE &trans  &sk JP_AT          &kp DOLLAR  &trans  &trans  &kp F11
+&trans         &kp CARET        &trans                &trans            &trans             &trans       &trans  &trans                                      &kp F12
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -71,10 +96,10 @@
 
         layer_2 {
             bindings = <
-&kp TAB               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS                                             &kp CARET         &kp AMPERSAND  &mkp MCLK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp ASTRK             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &kp LC(LA(KP_NUMBER_0))    &kp UNDERSCORE  &kp EXCLAMATION   &mkp LCLK      &kp UP_ARROW  &mkp RCLK             &kp COLON
-&mt LEFT_SHIFT SLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &kp SINGLE_QUOTE           &trans          &kp LEFT_BRACKET  &kp LEFT       &kp DOWN      &kp RIGHT_ARROW       &kp BACKSLASH
-&trans                &kp KP_NUMBER_0  &kp DOT          &trans           &trans     &trans                     &trans          &trans                                                               &trans
+&kp TAB               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS                                                &kp CARET         &kp AMPERSAND  &mkp MCLK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp JP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_PLUS   &kp LC(LA(KP_NUMBER_0))    &kp UNDERSCORE  &kp EXCLAMATION   &mkp LCLK      &kp UP_ARROW  &mkp RCLK             &kp COLON
+&mt LEFT_SHIFT SLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL     &kp JP_BACKQUOTE           &trans          &kp LEFT_BRACKET  &kp LEFT       &kp DOWN      &kp RIGHT_ARROW       &kp BACKSLASH
+&kp ESC               &kp KP_NUMBER_0  &kp DOT          &kp DEL          &trans        &trans                     &trans          &trans                                                               &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
