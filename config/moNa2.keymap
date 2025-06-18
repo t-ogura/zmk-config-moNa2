@@ -7,7 +7,6 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #define MOUSE 6
 
-CONFIG_LAYOUT_SHIFT_TARGET_JIS=y
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 
