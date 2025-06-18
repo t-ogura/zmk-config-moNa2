@@ -3,18 +3,3 @@ config SHIELD_MONA2_R
 
 config SHIELD_MONA2_L
     def_bool $(shields_list_contains,moNa2_L)
-
-choice LAYOUT_SHIFT_TARGET_LAYOUT
-    prompt "Target keyboard layout"
-    default LAYOUT_SHIFT_TARGET_JIS
-
-config LAYOUT_SHIFT_TARGET_JIS
-    bool "Japanese (JIS)"
-
-config LAYOUT_SHIFT_TARGET_DVORAK
-    bool "Dvorak"
-
-config LAYOUT_SHIFT_TARGET_COLEMAK    # Add this line
-    bool "Colemak"                    # Add this line
-
-endchoice
