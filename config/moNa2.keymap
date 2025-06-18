@@ -42,22 +42,6 @@ CONFIG_LAYOUT_SHIFT_TARGET_JIS=y
 
 
 / {
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &kpls EQUAL    // Will output = normally, but _ when layout shift is active for JIS layout
-                &tog_ls        // Toggle layout shift on/off
-                &tog_ls_on     // Turn layout shift on
-                &tog_ls_off    // Turn layout shift off
-            >;
-        };
-    };
-};
-
-
-/ {
     combos { compatible = "zmk,combos"; };
 
     macros {
