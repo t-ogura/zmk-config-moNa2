@@ -36,6 +36,7 @@
         b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <24>;
         status = "disabled";
+        inverted = <1>;  // ←これを追加または 1 に変更
     };
 
     right_encoder: encoder_right {
