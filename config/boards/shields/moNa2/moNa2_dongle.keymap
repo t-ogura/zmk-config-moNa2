@@ -1,0 +1,24 @@
+/*
+ * moNa2 Dongle Keymap - Minimal keymap for dongle device
+ * Based on forager dongle implementation
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "Base";
+            bindings = <
+                &none &none &none &none &none                         &none &none &none &none &none
+                &none &none &none &none &none                         &none &none &none &none &none
+                &none &none &none &none &none                         &none &none &none &none &none
+                                        &none &none     &none &none
+            >;
+        };
+    };
+};

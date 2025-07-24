@@ -3,3 +3,6 @@ config SHIELD_MONA2_R
 
 config SHIELD_MONA2_L
     def_bool $(shields_list_contains,moNa2_L)
+
+config SHIELD_MONA2_DONGLE
+    def_bool $(shields_list_contains,moNa2_dongle)
