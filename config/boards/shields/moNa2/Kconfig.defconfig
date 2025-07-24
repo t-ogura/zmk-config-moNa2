@@ -22,9 +22,6 @@ config ZMK_SPLIT
 config ZMK_SPLIT_ROLE_CENTRAL
     default n
 
-config ZMK_BLE_PERIPHERAL_PREFERRED_CONN_PARAMS
-    default y
-
 endif
 
 if SHIELD_MONA2_L
@@ -37,9 +34,6 @@ config ZMK_SPLIT
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default n
-
-config ZMK_BLE_PERIPHERAL_PREFERRED_CONN_PARAMS
-    default y
 
 endif
 
