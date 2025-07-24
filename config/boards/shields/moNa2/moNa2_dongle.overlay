@@ -3,6 +3,8 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
+        zmk,matrix_transform = &mock_transform;
+        zmk,physical-layout = &mock_layout;
     };
 
     mock_kscan: kscan_1 {
@@ -10,6 +12,20 @@
         columns = <0>;
         rows = <0>;
         events = <0>;
+    };
+
+    mock_transform: mock_transform {
+        compatible = "zmk,matrix-transform";
+        columns = <0>;
+        rows = <0>;
+        map = </* empty transform for dongle */>;
+    };
+
+    mock_layout: mock_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Dongle Layout";
+        transform = <&mock_transform>;
+        keys = </* empty keys for dongle */>;
     };
 };
 
