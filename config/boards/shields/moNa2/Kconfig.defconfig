@@ -19,6 +19,12 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT
     default y
 
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+config ZMK_BLE_PERIPHERAL_PREFERRED_CONN_PARAMS
+    default y
+
 endif
 
 if SHIELD_MONA2_L
@@ -27,6 +33,12 @@ config ZMK_KEYBOARD_NAME
     default "moNa2_L"
 
 config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+config ZMK_BLE_PERIPHERAL_PREFERRED_CONN_PARAMS
     default y
 
 endif
