@@ -17,3 +17,8 @@
 &kscan0 {
     status = "disabled";
 };
+
+// Disable PMW3610 trackball sensor for dongle mode
+&spi0 {
+    status = "disabled";
+};
