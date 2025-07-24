@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/caksoylar  
     - name: kot149
       url-base: https://github.com/kot149
+    - name: carrefinho
+      url-base: https://github.com/carrefinho
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -22,5 +24,8 @@ manifest:
     - name: zmk-layout-shift
       remote: kot149
       revision: v1
+    - name: prospector-zmk-module
+      remote: carrefinho
+      revision: main
   self:
     path: config
