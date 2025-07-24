@@ -22,3 +22,8 @@
 &spi0 {
     status = "disabled";
 };
+
+// Remove trackball listener to prevent any PMW3610 references
+/ {
+    /delete-node/ trackball_listener;
+};
