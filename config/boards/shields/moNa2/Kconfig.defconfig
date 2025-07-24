@@ -1,3 +1,16 @@
+if SHIELD_MONA2_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "moNa2"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+endif
+
 if SHIELD_MONA2_R
 
 config ZMK_KEYBOARD_NAME
@@ -15,6 +28,13 @@ if SHIELD_MONA2_L
 
 config ZMK_KEYBOARD_NAME
     default "moNa2_L"
+
+config ZMK_SPLIT
+    default y
+
+endif
+
+if SHIELD_MONA2_DONGLE || SHIELD_MONA2_L || SHIELD_MONA2_R
 
 config ZMK_SPLIT
     default y

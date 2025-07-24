@@ -12,3 +12,8 @@
         events = <0>;
     };
 };
+
+// Disable the original kscan0 which lacks col-gpios
+&kscan0 {
+    status = "disabled";
+};
