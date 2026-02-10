@@ -110,7 +110,7 @@
         layer_3 {
             bindings = <
 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4                    &kp LG(LC(LEFT))  &kp LG(TAB)  &mkp MB3  &trans     &kp LG(LC(RIGHT))
-&kp HOME        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END       &trans    &trans  &mkp MB4          &mkp MB1     &kp UP    &mkp MB2   &mkp MB5
+&studio_unlock  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END       &trans    &trans  &mkp MB4          &mkp MB1     &kp UP    &mkp MB2   &mkp MB5
 &kp LEFT_SHIFT  &trans          &trans          &trans           &trans        &trans    &trans  &trans            &kp LEFT     &kp DOWN  &kp RIGHT  &trans
 &trans          &trans          &trans          &trans           &trans        &trans    &trans  &trans                                              &trans
             >;
